@@ -99,7 +99,9 @@ enum QtModule
     QtWebChannelModule        = 0x0000200000000000,
     QtTextToSpeechModule      = 0x0000400000000000,
     QtSerialBusModule         = 0x0000800000000000,
-    QtGamePadModule           = 0x0001000000000000
+    QtGamePadModule           = 0x0001000000000000,
+    QtChartsModule            = 0x0002000000000000,
+    QtDataVisualizationModule = 0x0004000000000000
 };
 
 struct QtModuleEntry {
@@ -111,8 +113,10 @@ struct QtModuleEntry {
 
 static QtModuleEntry qtModuleEntries[] = {
     { QtBluetoothModule, "bluetooth", "Qt5Bluetooth", 0 },
+    { QtChartsModule, "charts", "Qt5Charts", 0 },
     { QtConcurrentModule, "concurrent", "Qt5Concurrent", "qtbase" },
     { QtCoreModule, "core", "Qt5Core", "qtbase" },
+    { QtDataVisualizationModule, "datavisualization", "Qt5DataVisualization", 0},
     { QtDeclarativeModule, "declarative", "Qt5Declarative", "qtquick1" },
     { QtDesignerModule, "designer", "Qt5Designer", 0 },
     { QtDesignerComponents, "designercomponents", "Qt5DesignerComponents", 0 },
